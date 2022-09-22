@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SimpleContextMenu.Properties {
+namespace CpFiles.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace SimpleContextMenu.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SimpleContextMenu.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CpFiles.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,54 @@ namespace SimpleContextMenu.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2993665_brand_brands_explorer_logo_logos_icon {
+            get {
+                object obj = ResourceManager.GetObject("2993665_brand_brands_explorer_logo_logos_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _38988_edit_clear_sweep_sweeper_icon {
+            get {
+                object obj = ResourceManager.GetObject("38988_edit_clear_sweep_sweeper_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7038097_marketing_file_business_clipboard_data_icon {
+            get {
+                object obj = ResourceManager.GetObject("7038097_marketing_file_business_clipboard_data_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Des_Folder_Path {
+            get {
+                return ResourceManager.GetString("Des_Folder_Path", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C:\WebPos\SaturnEMoney\WPSaturnEMoney.
+        /// </summary>
+        internal static string Src_Folder_Path {
+            get {
+                return ResourceManager.GetString("Src_Folder_Path", resourceCulture);
             }
         }
     }

@@ -1,16 +1,17 @@
-// Sample application that demonstrates a simple shell context menu.
-// Ralph Arvesen (www.vertigo.com / www.lostsprings.com)
-
+﻿using Microsoft.Win32;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
-using Microsoft.Win32;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SimpleContextMenu
+namespace CpFiles
 {
 	/// <summary>
 	/// Register and unregister simple shell context menus.
 	/// </summary>
-	static class FileShellExtension
+	public static class FileShellExtension
 	{
 		/// <summary>
 		/// Register a simple shell context menu.
@@ -20,14 +21,14 @@ namespace SimpleContextMenu
 		/// <param name="menuText">Text that appears in the context menu.</param>
 		/// <param name="menuCommand">Command line that is executed.</param>
 		public static void Register(
-			string fileType, string shellKeyName, 
+			string fileType, string shellKeyName,
 			string menuText, string menuCommand)
 		{
 			Debug.Assert(!string.IsNullOrEmpty(fileType) &&
 				!string.IsNullOrEmpty(shellKeyName) &&
-				!string.IsNullOrEmpty(menuText) && 
+				!string.IsNullOrEmpty(menuText) &&
 				!string.IsNullOrEmpty(menuCommand));
-			
+
 			// create full path to registry location
 			//string regPath = string.Format(@"{0}\shell\{1}", fileType, shellKeyName);
 			//AllFilesystemObjects
@@ -38,11 +39,11 @@ namespace SimpleContextMenu
 			{
 				key.SetValue(null, menuText);
 			}
-			
+
 			// add command that is invoked to the registry
 			using (RegistryKey key = Registry.ClassesRoot.CreateSubKey(
 				string.Format(@"{0}\command", regPath)))
-			{				
+			{
 				key.SetValue(null, menuCommand);
 			}
 		}
@@ -64,5 +65,4 @@ namespace SimpleContextMenu
 			Registry.ClassesRoot.DeleteSubKeyTree(regPath);
 		}
 	}
-
 }
