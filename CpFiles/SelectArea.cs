@@ -37,10 +37,10 @@ namespace CpFiles
 
         protected override void OnPaint(PaintEventArgs e) // you can safely omit this method if you want
         {
-            e.Graphics.FillRectangle(Brushes.Green, Top);
-            e.Graphics.FillRectangle(Brushes.Green, Left);
-            e.Graphics.FillRectangle(Brushes.Green, Right);
-            e.Graphics.FillRectangle(Brushes.Green, Bottom);
+            e.Graphics.FillRectangle(Brushes.Orange, Top);
+            e.Graphics.FillRectangle(Brushes.Orange, Left);
+            e.Graphics.FillRectangle(Brushes.Orange, Right);
+            e.Graphics.FillRectangle(Brushes.Orange, Bottom);
         }
 
         private const int
@@ -95,9 +95,9 @@ namespace CpFiles
 
         private void btnCaptureThis_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            btnCaptureThis.Visible = false;
             Save(this.Location.X, this.Location.Y, this.Width, this.Height, this.Size);
-            //save.Show();
+            btnCaptureThis.Visible = true;
         }
 
         public void Save(Int32 x, Int32 y, Int32 w, Int32 h, Size s)

@@ -30,8 +30,8 @@ namespace CpFiles
         //Application Key of your UWA   
         //U can use any .Exe file as well for open a windows Application  
         private const string calApp = "Saturn1000LaneIF.Test.exe";
-        protected static WindowsDriver<WindowsElement> calSession;
-
+        
+        private static readonly SelectArea selectArea = new SelectArea();
         public frmMain()
         {
             InitializeComponent();
@@ -370,7 +370,16 @@ namespace CpFiles
 
             //}
             
-            new SelectArea().Show();
+            //new SelectArea().Show();
+
+            if(selectArea.Visible == false)
+            {
+                selectArea.Show();
+            }
+            else
+            {
+                selectArea.Hide();
+            }
         }
     }
 }
